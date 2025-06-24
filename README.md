@@ -1,7 +1,7 @@
 📦 WordPress + Monitoring Stack with Docker Compose
 🔧 Description
 This project sets up a complete WordPress development and monitoring environment using Docker Compose. It includes:
-
+This project sets up a complete WordPress-based web application stack using Docker Compose. It includes WordPress served via NGINX, a MySQL backend, and phpMyAdmin for database management. For observability, it integrates Prometheus, Grafana, cAdvisor, and Node Exporter to monitor system and container metrics in real-time. The stack is modular, easy to deploy, and ideal for learning DevOps, container orchestration, and full-stack infrastructure setup. Suitable for local development or VM-based environments.
 WordPress – CMS platform
 
 MySQL – WordPress database
