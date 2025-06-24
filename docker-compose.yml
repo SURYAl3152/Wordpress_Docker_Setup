@@ -1,9 +1,7 @@
-version: '3.8'
-
 services:
   db:
     image: mysql:5.7
-    container_name: mysql
+    container_name: wordpress-db
     environment:
       MYSQL_ROOT_PASSWORD: surya
       MYSQL_DATABASE: wordpress
@@ -18,7 +16,7 @@ services:
     depends_on:
       - db
     environment:
-      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_HOST: wordpress-db:3306
       WORDPRESS_DB_USER: surya
       WORDPRESS_DB_PASSWORD: surya
       WORDPRESS_DB_NAME: wordpress
@@ -31,7 +29,7 @@ services:
     ports:
       - "8083:80"
     environment:
-      PMA_HOST: db
+      PMA_HOST: wordpress-db
       PMA_USER: surya
       PMA_PASSWORD: surya
     depends_on:
